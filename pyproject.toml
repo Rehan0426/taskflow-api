@@ -1,0 +1,18 @@
+[project]
+name = "taskflow-api"
+version = "1.0.0"
+description = "Team Task Management REST API with RBAC and Refresh Token Rotation"
+readme = "README.md"
+requires-python = ">=3.12"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
+ignore = ["B008", "E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --cov=app --cov-report=term-missing"
